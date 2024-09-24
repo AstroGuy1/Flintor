@@ -58,7 +58,7 @@ Installation
 
 bash
 
-Copy code
+
 
 `pip install flintor`
 
@@ -74,7 +74,7 @@ Copy code
 
     bash
 
-    Copy code
+    
 
     `pip install .`
 
@@ -89,7 +89,7 @@ Create a file named `app.py` and add the following code:
 
 python
 
-Copy code
+
 
 `from flintor import Framework
 
@@ -106,7 +106,7 @@ Run the application:
 
 bash
 
-Copy code
+
 
 `python app.py`
 
@@ -123,7 +123,7 @@ Use the `@app.route()` decorator to define routes.
 
 python
 
-Copy code
+
 
 `@app.route('/path')
 def handler(request):
@@ -135,7 +135,7 @@ Include dynamic parameters in the URL using angle brackets.
 
 python
 
-Copy code
+
 
 `@app.route('/user/<username>')
 def show_user_profile(request, username):
@@ -147,7 +147,7 @@ Specify allowed HTTP methods using the `methods` parameter.
 
 python
 
-Copy code
+
 
 `@app.route('/submit', methods=['GET', 'POST'])
 def submit(request):
@@ -181,7 +181,7 @@ The `Request` object provides access to request data.
 
 python
 
-Copy code
+
 
 `value = request.query.get('key', ['default'])[0]`
 
@@ -191,7 +191,7 @@ Use the `Response` object to customize the response.
 
 python
 
-Copy code
+
 
 `from  flintor import Response
 
@@ -220,7 +220,7 @@ Create templates in the `templates/` directory.
 
 html
 
-Copy code
+
 
 `<html>
 <head>
@@ -235,7 +235,7 @@ Copy code
 
 python
 
-Copy code
+
 
 `@app.route('/hello/<name>')
 def hello(request, name):
@@ -250,7 +250,7 @@ Middleware functions process requests before they reach route handlers.
 
 python
 
-Copy code
+
 
 `def simple_middleware(request, response):
     print(f"{request.method} request for {request.path}")
@@ -272,7 +272,7 @@ In your templates:
 
 html
 
-Copy code
+
 
 `<link rel="stylesheet" type="text/css" href="/static/style.css">`
 
@@ -291,7 +291,7 @@ Manage user sessions using cookies.
 
 python
 
-Copy code
+
 
 `@app.route('/login', methods=['POST'])
 def login(request):
@@ -303,7 +303,7 @@ def login(request):
 
 python
 
-Copy code
+
 
 `@app.route('/dashboard')
 def dashboard(request):
@@ -321,7 +321,7 @@ Interact with a SQLite database using the `ORM` class.
 
 python
 
-Copy code
+
 
 `db = ORM('mydatabase.db')`
 
@@ -329,7 +329,7 @@ Copy code
 
 python
 
-Copy code
+
 
 `# Create a table
 db.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT)', commit=True)
@@ -344,7 +344,7 @@ users = db.fetchall('SELECT * FROM users')`
 
 python
 
-Copy code
+
 
 `db.close()`
 
@@ -357,7 +357,7 @@ Full Example Application
 
 arduino
 
-Copy code
+
 
 `your_app/
 ├── app.py
@@ -371,7 +371,7 @@ Copy code
 
 python
 
-Copy code
+
 
 `from flintor import Framework, Response
 
@@ -398,7 +398,7 @@ if __name__ == '__main__':
 
 html
 
-Copy code
+
 
 `<html>
 <head>
@@ -415,7 +415,7 @@ Copy code
 
 html
 
-Copy code
+
 
 `<html>
 <head>
@@ -437,7 +437,7 @@ Customize error responses by overriding the `send_error` method in the `RequestH
 
 python
 
-Copy code
+
 
 `def custom_send_error(self, code, message=None):
     self.send_response(code)
