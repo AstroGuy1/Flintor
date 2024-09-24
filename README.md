@@ -488,3 +488,5 @@ Contributions are welcome! To contribute:
 Remember, I am not God. I have not thought of everything, if you have an idea on what to do, please do it. I would love to incorportate it.
 
 Please ensure your code follows good coding practices and includes documentation/comments where necessary.
+
+Side note: If someone would be willing to clean up this readme with proper markdown format, it would be awesome. I will be getting to that later.
