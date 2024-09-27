@@ -1,6 +1,5 @@
 # Flintor
 An Ultra Lightweight Python Web Development Framework
-Flintor Documentation
 =========================
 
 Flintor is an ultra-lightweight, dependency-free web framework in Python. It provides core functionalities similar to Flask and Django but remains minimal and efficient. This documentation will guide you through installation, usage, and the various features offered by Flintor.
